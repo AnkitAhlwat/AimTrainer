@@ -22,7 +22,7 @@ public class GameApplication extends Application {
     public void start(Stage stage) throws IOException {
         GameApplication.stage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("game-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 800 , 600);
+        Scene scene = new Scene(fxmlLoader.load(), 1200 , 800);
         Image logo = new Image("bullseye.png");
         stage.getIcons().add(logo);
         stage.setTitle("Aim Trainer");
