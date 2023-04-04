@@ -21,7 +21,7 @@ public class GameApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         GameApplication.stage = stage;
-        FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("game-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("game-view-ankit.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200 , 800);
         Image logo = new Image("bullseye.png");
         stage.getIcons().add(logo);

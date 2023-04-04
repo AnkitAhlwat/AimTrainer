@@ -13,8 +13,8 @@ import javafx.scene.shape.Circle;
 import java.util.Random;
 
 public class GameController {
-    private final double MAX_HEIGHT = 600;;
-    private final double MAX_WIDTH = 800;
+    private final double MAX_HEIGHT = 800;;
+    private final double MAX_WIDTH = 1200;
 
     private final Random randomCircleGenerator = new Random();
     @FXML
