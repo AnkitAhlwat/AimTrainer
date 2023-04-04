@@ -7,6 +7,6 @@
 <BorderPane xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.example.termproject.GameController" fx:id="gameWindow">
     <Pane fx:id = "pane" onMouseClicked="#changeLocation">
-        <Circle fx:id="bullsEye" radius="20" />
+        <Circle fx:id="bullsEye" radius="20" centerX="400" centerY="400"/>
     </Pane>
 </BorderPane>

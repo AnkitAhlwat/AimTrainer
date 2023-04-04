@@ -24,11 +24,6 @@ public class GameController {
     private Button button;
 
     @FXML
-    protected void onHelloButtonClick() {
-        button.setVisible(false);
-        bullsEye.setVisible(true);
-    }
-    @FXML
     private void changeLocation(){
         bullsEye.setFill(Color.BLACK);
         bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
