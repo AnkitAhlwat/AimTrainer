@@ -1,6 +1,5 @@
 package com.example.termproject;
 
-import javafx.animation.FadeTransition;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -8,7 +7,7 @@ import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-public class HelloController {
+public class GameController {
     private final int MAX_LENGTH = 800;
     private final int MAX_WIDTH = 600;
     @FXML
