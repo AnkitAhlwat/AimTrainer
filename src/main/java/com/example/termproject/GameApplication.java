@@ -15,7 +15,7 @@ public class GameApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 800 , 600);
         Image logo = new Image("bullseye.png");
         stage.getIcons().add(logo);
-        stage.setTitle("Aim Trainer!");
+        stage.setTitle("Aim Trainer");
         stage.setScene(scene);
         stage.show();
     }
