@@ -5,6 +5,8 @@
 <?import javafx.scene.text.Font?>
 
 
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" style="-fx-background-image: url('terminal.jpg');" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.termproject.GameController">
    <children>
       <Label layoutX="38.0" layoutY="28.0" prefHeight="70.0" prefWidth="147.0" text="Score:">
@@ -17,15 +19,18 @@
             <Font name="System Bold" size="48.0" />
          </font>
       </Label>
-      <Label fx:id="scorelabel" layoutX="203.0" layoutY="28.0" prefHeight="70.0" prefWidth="147.0" text="0">
+      <Label fx:id="scoreLabel" layoutX="203.0" layoutY="28.0" prefHeight="70.0" prefWidth="200.0" text="0">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="timelabel" layoutX="1132.0" layoutY="28.0" prefHeight="70.0" prefWidth="147.0" text="4:20">
+      <Label fx:id="timeLabel" layoutX="1132.0" layoutY="28.0" prefHeight="70.0" prefWidth="147.0" text="4:20">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
+      <Pane fx:id = "pane" onMouseClicked="#changeLocation">
+         <Circle fx:id="bullsEye" radius="20" centerX="400" centerY="400"/>
+      </Pane>
    </children>
 </AnchorPane>

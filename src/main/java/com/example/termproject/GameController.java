@@ -2,6 +2,7 @@ package com.example.termproject;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -17,6 +18,11 @@ public class GameController {
     private final double MAX_WIDTH = 1200;
 
     private final Random randomCircleGenerator = new Random();
+    private int Score = 0;
+    @FXML
+    private Label scoreLabel;
+    @FXML
+    private Label timeLabel;
     @FXML
     private BorderPane gameWindow;
     @FXML
@@ -30,6 +36,8 @@ public class GameController {
     private ImageView imageView = new ImageView(logo);
     @FXML
     private void changeLocation(){
+        Score++;
+        scoreLabel.setText(""+Score);
         bullsEye.setFill(new ImagePattern(logo));
         bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
         bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
