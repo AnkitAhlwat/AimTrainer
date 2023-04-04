@@ -2,9 +2,12 @@ package com.example.termproject;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 
 import java.util.Random;
@@ -22,10 +25,12 @@ public class GameController {
     private Pane pane;
     @FXML
     private Button button;
-
+    Image logo = new Image("bullseye.png");
+    @FXML
+    private ImageView imageView = new ImageView(logo);
     @FXML
     private void changeLocation(){
-        bullsEye.setFill(Color.BLACK);
+        bullsEye.setFill(new ImagePattern(logo));
         bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
         bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
     }
@@ -40,5 +45,8 @@ public class GameController {
     }
     private double getXLowerBound(){
         return bullsEye.getRadius();
+    }
+    private void setImageView(){
+       imageView = new ImageView("bullseye.png");
     }
 }
