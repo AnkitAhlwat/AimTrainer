@@ -17,7 +17,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <ProgressIndicator layoutX="14.0" layoutY="38.0" prefHeight="71.0" prefWidth="91.0" />
+      <ProgressIndicator layoutX="14.0" layoutY="38.0" prefHeight="71.0" prefWidth="91.0" style="-fx-progress-color: white;" />
       <Label fx:id="loadlabel" layoutX="14.0" layoutY="106.0" prefHeight="27.0" prefWidth="551.0" text="Loading..." textFill="WHITE">
          <font>
             <Font size="18.0" />
