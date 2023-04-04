@@ -31,10 +31,6 @@ public class GameController {
     @FXML
     private void changeLocation(){
         bullsEye.setFill(Color.BLACK);
-        System.out.println(getXLowerBound());
-        System.out.println(getXUpperBound());
-        System.out.println(getXLowerBound());
-        System.out.println(getYUpperBound());
         bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
         bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
     }
