@@ -4,6 +4,7 @@ import javafx.application.Preloader;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
@@ -16,6 +17,8 @@ public class LauncherPreloader extends Preloader {
         Parent root = FXMLLoader.load(getClass().getResource("/com/example/termproject/initPreloader.fxml"));
         Scene scene = new Scene(root);
         stage.initStyle(StageStyle.UNDECORATED);
+        Image logo = new Image("bullseye.png");
+        stage.getIcons().add(logo);
         stage.setScene(scene);
         stage.show();
     }
