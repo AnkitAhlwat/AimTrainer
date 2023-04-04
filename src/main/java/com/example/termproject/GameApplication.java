@@ -9,8 +9,18 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class GameApplication extends Application {
+
+    public static Stage stage = null;
+    public static Scene scene = null;
+
+    @Override
+    public void init() throws Exception {
+        InitPreloader init = new InitPreloader();
+        init.checkFunctions();
+    }
     @Override
     public void start(Stage stage) throws IOException {
+        GameApplication.stage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("game-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 800 , 600);
         Image logo = new Image("bullseye.png");
@@ -21,6 +31,7 @@ public class GameApplication extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        System.setProperty("javafx.preloader", LauncherPreloader.class.getName());
+        launch(args);
     }
 }
