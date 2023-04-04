@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="311.0" prefWidth="668.0" style="-fx-background-image: url('introbackground.jpg');" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.termproject.InitPreloader">
+<AnchorPane prefHeight="311.0" prefWidth="668.0" style="-fx-background-image: url('introbackground.jpg'); -fx-background-repeat: no-repeat;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.termproject.InitPreloader">
    <children>
       <Label layoutX="14.0" layoutY="146.0" text="Aim Trainer" textFill="WHITE">
          <font>
