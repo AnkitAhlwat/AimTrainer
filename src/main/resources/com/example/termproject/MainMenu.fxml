@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="599.0" prefWidth="320" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.termproject.MainMenu">
+<children>
+    <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="299.0" mnemonicParsing="false" onAction="#handleStartButtonAction" text="START" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+    <Button fx:id="difficultyButton" alignment="CENTER" contentDisplay="CENTER" layoutX="115.0" layoutY="361.0" mnemonicParsing="false" onAction="#handleDifficultyButtonAction" text="DIFFICULTY" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+    <Button fx:id="mapButton" alignment="CENTER" contentDisplay="CENTER" layoutX="136.0" layoutY="424.0" mnemonicParsing="false" onAction="#handleMapButtonAction" text="MAP" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+    <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="137.0" layoutY="487.0" mnemonicParsing="false" onAction="#handleExitButtonAction" text="EXIT" textAlignment="CENTER">
+         <font>
+            <Font size="14.0" />
+         </font></Button>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="85.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../logo.png" />
+         </image>
+      </ImageView>
+</children>
+</AnchorPane>
