@@ -7,10 +7,12 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.layout.*;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.Objects;
 
 import static com.example.termproject.GameApplication.stage;
 
@@ -26,7 +28,6 @@ public class MainMenu extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         primaryStage.setTitle("Main Menu");
         primaryStage.setScene(new Scene(root, 320, 600));
-        primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.show();
     }
 
@@ -35,6 +36,11 @@ public class MainMenu extends Application {
         // handle start button action
         FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("game-view-ankit.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1280 , 800);
+
+        Parent root = fxmlLoader.getRoot();
+        root.setStyle("-fx-background-image: url('terminal.jpg')");
+        scene.setRoot(root);
+
         Image logo = new Image("bullseye.png");
         stage.getIcons().add(logo);
         stage.setTitle("Aim Trainer");
