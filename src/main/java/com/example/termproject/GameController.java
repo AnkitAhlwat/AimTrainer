@@ -17,6 +17,8 @@ public class GameController {
     private final double MAX_HEIGHT = 800;;
     private final double MAX_WIDTH = 1200;
 
+    private String musicFile = "src/main/resources/gunShotComp.mp3";
+
     private final Random randomCircleGenerator = new Random();
     private int Score = 0;
     @FXML
@@ -61,7 +63,6 @@ public class GameController {
         bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
     }
     private void playSound(){
-        String musicFile = "src/main/resources/gunShot.mp3";
         Media sound = new Media(new File(musicFile).toURI().toString());
         mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();

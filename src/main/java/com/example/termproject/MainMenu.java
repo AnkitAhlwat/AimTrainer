@@ -54,8 +54,12 @@ public class MainMenu extends Application {
     }
 
     @FXML
-    private void handleMapButtonAction() {
+    private void handleMapButtonAction() throws IOException {
         // handle map button action
+        FXMLLoader fxmlLoaderMap = new FXMLLoader(GameApplication.class.getResource("ChangeMap.fxml"));
+        Scene mapselection = new Scene(fxmlLoaderMap.load(), 1280, 800);
+        stage.setScene(mapselection);
+        stage.show();
     }
 
     @FXML
