@@ -2,8 +2,10 @@ package com.example.termproject;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
+import javafx.scene.ImageCursor;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
@@ -29,14 +31,21 @@ public class GameController {
     private Circle bullsEye;
     @FXML
     private Pane pane;
+
+    @FXML
+    private AnchorPane anchorPane;
+
     private long startTime;
     private AnimationTimer animationTimer;
     private MediaPlayer mediaPlayer;
     Image logo = new Image("patrick.png");
 
+    Image cursorImage = new Image("scope.png");
+
 
     @FXML
     private void initialize() {
+        anchorPane.setCursor(new ImageCursor(cursorImage));
         timeLabel.setText("60");
         startTime = System.nanoTime();
         animationTimer = new AnimationTimer() {
