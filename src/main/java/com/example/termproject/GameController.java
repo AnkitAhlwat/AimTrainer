@@ -3,6 +3,7 @@ package com.example.termproject;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.ImageCursor;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
@@ -18,6 +19,7 @@ import java.util.Random;
 public class GameController {
     private final double MAX_HEIGHT = 800;;
     private final double MAX_WIDTH = 1200;
+    private int totalClicks = 0;
 
     private String musicFile = "src/main/resources/gunShotComp.mp3";
 
@@ -34,6 +36,18 @@ public class GameController {
 
     @FXML
     private AnchorPane anchorPane;
+    @FXML
+    private Pane scoreBoard;
+    @FXML
+    private Label targetsMissed;
+    @FXML
+    private Label accuracy;
+    @FXML
+    private Button mainMenu;
+    @FXML
+    private Button tryAgain;
+    @FXML
+    private Label scoreBoardText;
 
     private long startTime;
     private AnimationTimer animationTimer;
@@ -88,4 +102,10 @@ public class GameController {
     private double getXLowerBound(){
         return bullsEye.getRadius();
     }
+
+    @FXML
+    private void incrementCounter() {
+        totalClicks++;
+    }
+
 }
