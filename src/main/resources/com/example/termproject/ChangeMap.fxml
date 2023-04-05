@@ -93,7 +93,7 @@
          <top>
             <ImageView fitHeight="152.0" fitWidth="270.0" pickOnBounds="true" BorderPane.alignment="CENTER">
                <image>
-                  <Image url="@../../../spongebobhouse.png" />
+                  <Image url="@../../../spongebobhouse.jpg" />
                </image>
             </ImageView>
          </top>

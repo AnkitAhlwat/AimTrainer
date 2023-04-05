@@ -36,6 +36,8 @@ public class ChangeMap {
     @FXML
     private AnchorPane anchorPane;
 
+    public String selectedMap;
+
 
     @FXML
     void handleBackButton(ActionEvent event) throws IOException {
@@ -61,7 +63,8 @@ public class ChangeMap {
     @FXML
     private void handleBorderPaneClicked(MouseEvent event) {
         BorderPane clickedBorderPane = (BorderPane) event.getSource();
-        String borderPaneId = clickedBorderPane.getId();
+        selectedMap = clickedBorderPane.getId();
+        MainMenu.selectedMap = selectedMap;
         clearBorder();
         clickedBorderPane.setStyle("-fx-border-color: white; -fx-border-width: 2");
     }

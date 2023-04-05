@@ -23,6 +23,8 @@ public class MainMenu extends Application {
     @FXML private Button mapButton;
     @FXML private Button exitButton;
 
+    public static String selectedMap = "windows-xp";
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
@@ -38,7 +40,8 @@ public class MainMenu extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 1280 , 800);
 
         Parent root = fxmlLoader.getRoot();
-        root.setStyle("-fx-background-image: url('terminal.jpg')");
+        String backgroundImage = "-fx-background-image: url('" + selectedMap + ".jpg')";
+        root.setStyle(backgroundImage);
         scene.setRoot(root);
 
         Image logo = new Image("bullseye.png");
