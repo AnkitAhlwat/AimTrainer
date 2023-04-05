@@ -33,8 +33,6 @@ public class GameController {
     private Button button;
     Image logo = new Image("bullseye.png");
     @FXML
-    private ImageView imageView = new ImageView(logo);
-    @FXML
     private void changeLocation(){
         Score++;
         scoreLabel.setText(""+Score);
@@ -53,8 +51,5 @@ public class GameController {
     }
     private double getXLowerBound(){
         return bullsEye.getRadius();
-    }
-    private void setImageView(){
-       imageView = new ImageView("bullseye.png");
     }
 }
