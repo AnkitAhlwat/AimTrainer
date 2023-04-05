@@ -31,6 +31,7 @@
          </font>
       </Label>
          <Circle fx:id="bullsEye" onMouseClicked="#changeLocation" centerX="400" centerY="400" radius="60" />
+      <Rectangle fx:id="darkenBackground" arcHeight="5.0" arcWidth="5.0" height="800.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" visible="false" width="1280.0" />
       <Pane fx:id="scoreBoard" layoutX="312.0" layoutY="130.0" prefHeight="610.0" prefWidth="656.0" visible="false">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="30.0" prefHeight="70.0" prefWidth="656.0" text="Scoreboard" textAlignment="CENTER" textFill="WHITE">
@@ -77,6 +78,5 @@
             </Label>
          </children>
       </Pane>
-      <Rectangle fx:id="darkenBackground" arcHeight="5.0" arcWidth="5.0" height="800.0" opacity="0.4" stroke="BLACK" strokeType="INSIDE" visible="false" width="1280.0" />
    </children>
 </AnchorPane>
