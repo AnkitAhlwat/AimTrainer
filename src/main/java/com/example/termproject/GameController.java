@@ -39,6 +39,8 @@ public class GameController {
     @FXML
     private Pane scoreBoard;
     @FXML
+    private Label targetsHit;
+    @FXML
     private Label targetsMissed;
     @FXML
     private Label accuracy;
@@ -60,17 +62,18 @@ public class GameController {
     @FXML
     private void initialize() {
         anchorPane.setCursor(new ImageCursor(cursorImage));
-        timeLabel.setText("60");
+        timeLabel.setText("5");
         startTime = System.nanoTime();
         animationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
                 long elapsedTime = (now - startTime) / 1_000_000_000;
-                int time = 60 - (int) elapsedTime;
+                int time = 5 - (int) elapsedTime;
                 timeLabel.setText(Integer.toString(time));
 
                 if (time <= 0) {
                     animationTimer.stop();
+                    displayScoreBoard();
                 }
             }
         };
@@ -106,6 +109,16 @@ public class GameController {
     @FXML
     private void incrementCounter() {
         totalClicks++;
+    }
+    @FXML
+    private void displayScoreBoard(){
+        scoreBoard.setVisible(true);
+        targetsHit.setText(""+Score);
+        targetsMissed.setText(""+(totalClicks - Score));
+        accuracy.setText(""+ (Score * 100 / totalClicks) + "%");
+        scoreBoardText.setText("Game Over!");
+        mainMenu.setVisible(true);
+        tryAgain.setVisible(true);
     }
 
 }
