@@ -56,6 +56,7 @@ public class MainMenu extends Application {
         stage.setTitle("Aim Trainer");
         stage.setScene(scene);
         stage.show();
+        GameApplication.mediaPlayerMM.stop();
     }
 
     @FXML

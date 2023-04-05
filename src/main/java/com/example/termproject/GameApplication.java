@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class GameApplication extends Application {
 
-    private MediaPlayer mediaPlayer;
+    static MediaPlayer mediaPlayerMM;
     public static Stage stage = null;
     public static Scene scene = null;
 
@@ -23,17 +23,18 @@ public class GameApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         GameApplication.stage = stage;
+        playMusic();
         FXMLLoader fxmlLoadermm = new FXMLLoader(GameApplication.class.getResource("MainMenu.fxml"));
         Scene mainmenuscene = new Scene(fxmlLoadermm.load(), 320, 600);
         stage.setScene(mainmenuscene);
         stage.show();
-        playMusic();
+
     }
     private void playMusic() {
         String musicFile = "src/main/resources/mainMenu.mp3";
         Media sound = new Media(new File(musicFile).toURI().toString());
-        mediaPlayer = new MediaPlayer(sound);
-        mediaPlayer.play();
+        mediaPlayerMM = new MediaPlayer(sound);
+        mediaPlayerMM.play();
     }
     public static void main(String[] args) {
         System.setProperty("javafx.preloader", LauncherPreloader.class.getName());
