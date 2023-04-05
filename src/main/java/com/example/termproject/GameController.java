@@ -7,7 +7,10 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
 
+import java.io.File;
 import java.util.Random;
 
 public class GameController {
@@ -26,26 +29,19 @@ public class GameController {
     private Pane pane;
     private long startTime;
     private AnimationTimer animationTimer;
+    private MediaPlayer mediaPlayer;
     Image logo = new Image("bullseye.png");
-    @FXML
-    private void changeLocation(){
-        Score++;
-        scoreLabel.setText(""+Score);
-        bullsEye.setFill(new ImagePattern(logo));
-        bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
-        bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
-    }
+
+
     @FXML
     private void initialize() {
         timeLabel.setText("60");
-
         startTime = System.nanoTime();
         animationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
                 long elapsedTime = (now - startTime) / 1_000_000_000;
                 int time = 60 - (int) elapsedTime;
-
                 timeLabel.setText(Integer.toString(time));
 
                 if (time <= 0) {
@@ -54,6 +50,21 @@ public class GameController {
             }
         };
         animationTimer.start();
+    }
+    @FXML
+    private void changeLocation(){
+        playSound();
+        Score++;
+        scoreLabel.setText(""+Score);
+        bullsEye.setFill(new ImagePattern(logo));
+        bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
+        bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
+    }
+    private void playSound(){
+        String musicFile = "src/main/resources/gunShot.mp3";
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
     }
     private double getYUpperBound(){
         return MAX_HEIGHT-(bullsEye.getRadius()*2);
