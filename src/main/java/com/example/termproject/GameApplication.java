@@ -21,12 +21,9 @@ public class GameApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         GameApplication.stage = stage;
-        FXMLLoader fxmlLoader = new FXMLLoader(GameApplication.class.getResource("game-view-ankit.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 1280 , 800);
-        Image logo = new Image("bullseye.png");
-        stage.getIcons().add(logo);
-        stage.setTitle("Aim Trainer");
-        stage.setScene(scene);
+        FXMLLoader fxmlLoadermm = new FXMLLoader(GameApplication.class.getResource("MainMenu.fxml"));
+        Scene mainmenuscene = new Scene(fxmlLoadermm.load(), 320, 600);
+        stage.setScene(mainmenuscene);
         stage.show();
     }
 
