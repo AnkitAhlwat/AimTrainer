@@ -7,11 +7,14 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
+import javafx.scene.shape.Rectangle;
 
 import java.io.File;
 import java.util.Random;
@@ -31,8 +34,6 @@ public class GameController {
     private Label timeLabel;
     @FXML
     private Circle bullsEye;
-    @FXML
-    private Pane pane;
 
     @FXML
     private AnchorPane anchorPane;
@@ -50,6 +51,8 @@ public class GameController {
     private Button tryAgain;
     @FXML
     private Label scoreBoardText;
+    @FXML
+    private Rectangle darkenBackground;
 
     private long startTime;
     private AnimationTimer animationTimer;
@@ -113,6 +116,8 @@ public class GameController {
     @FXML
     private void displayScoreBoard(){
         scoreBoard.setVisible(true);
+        darkenBackground.setVisible(true);
+        scoreBoard.setBackground(Background.fill(Color.GRAY));
         targetsHit.setText(""+Score);
         targetsMissed.setText(""+(totalClicks - Score));
         accuracy.setText(""+ (Score * 100 / totalClicks) + "%");
