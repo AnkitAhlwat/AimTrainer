@@ -23,7 +23,7 @@ public class MainMenu extends Application {
     @FXML private Button mapButton;
     @FXML private Button exitButton;
 
-    public static String selectedMap = "windows-xp";
+    public static String selectedMap = "spongebobhouse";
 
     @Override
     public void start(Stage primaryStage) throws Exception {
