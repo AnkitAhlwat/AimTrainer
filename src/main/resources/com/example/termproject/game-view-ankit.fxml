@@ -29,7 +29,7 @@
          </font>
       </Label>
       <Pane fx:id="pane" onMouseClicked="#changeLocation">
-         <Circle fx:id="bullsEye" centerX="400" centerY="400" radius="20" />
+         <Circle fx:id="bullsEye" centerX="400" centerY="400" radius="30" />
       </Pane>
    </children>
 </AnchorPane>

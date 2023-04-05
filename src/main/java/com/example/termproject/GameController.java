@@ -32,7 +32,7 @@ public class GameController {
     private long startTime;
     private AnimationTimer animationTimer;
     private MediaPlayer mediaPlayer;
-    Image logo = new Image("bullseye.png");
+    Image logo = new Image("patrick.png");
 
 
     @FXML
