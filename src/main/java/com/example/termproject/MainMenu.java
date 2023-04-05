@@ -2,10 +2,12 @@ package com.example.termproject;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
 import java.io.IOException;
 
@@ -39,6 +41,14 @@ public class MainMenu extends Application {
         root.setStyle(backgroundImage);
         scene.setRoot(root);
 
+        Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+        stage.setX(0);
+        stage.setY(0);
+        double stageWidth = 1280;
+        double stageHeight = 800;
+        stage.setX(screenBounds.getMinX() + (screenBounds.getWidth() - stageWidth) / 2);
+        stage.setY(screenBounds.getMinY() + (screenBounds.getHeight() - stageHeight) / 2);
+
         Image logo = new Image("bullseye.png");
         stage.getIcons().add(logo);
         stage.setTitle("Aim Trainer");
@@ -57,6 +67,15 @@ public class MainMenu extends Application {
         FXMLLoader fxmlLoaderMap = new FXMLLoader(GameApplication.class.getResource("ChangeMap.fxml"));
         Scene mapselection = new Scene(fxmlLoaderMap.load(), 1280, 800);
         stage.setScene(mapselection);
+
+        Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+        stage.setX(0);
+        stage.setY(0);
+        double stageWidth = 1280;
+        double stageHeight = 800;
+        stage.setX(screenBounds.getMinX() + (screenBounds.getWidth() - stageWidth) / 2);
+        stage.setY(screenBounds.getMinY() + (screenBounds.getHeight() - stageHeight) / 2);
+
         stage.show();
     }
 
