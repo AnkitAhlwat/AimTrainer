@@ -129,7 +129,6 @@ public class GameController {
     private void displayScoreBoard(){
         scoreBoard.setVisible(true);
         darkenBackground.setVisible(true);
-        scoreBoard.setBackground(Background.fill(Color.GRAY));
         targetsHit.setText(""+Score);
         targetsMissed.setText(""+(totalClicks - Score));
         accuracy.setText(""+ (Score * 100 / totalClicks) + "%");
