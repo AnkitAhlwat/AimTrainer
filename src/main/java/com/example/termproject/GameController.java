@@ -1,13 +1,12 @@
 package com.example.termproject;
 
+import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
-import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
 
@@ -31,6 +30,8 @@ public class GameController {
     private Pane pane;
     @FXML
     private Button button;
+    private long startTime;
+    private AnimationTimer animationTimer;
     Image logo = new Image("bullseye.png");
     @FXML
     private void changeLocation(){
@@ -40,11 +41,31 @@ public class GameController {
         bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
         bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
     }
+    @FXML
+    private void initialize() {
+        timeLabel.setText("60");
+
+        startTime = System.nanoTime();
+        animationTimer = new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                long elapsedTime = (now - startTime) / 1_000_000_000;
+                int time = 60 - (int) elapsedTime;
+
+                timeLabel.setText(Integer.toString(time));
+
+                if (time <= 0) {
+                    animationTimer.stop();
+                }
+            }
+        };
+        animationTimer.start();
+    }
     private double getYUpperBound(){
-        return MAX_HEIGHT-bullsEye.getRadius();
+        return MAX_HEIGHT-(bullsEye.getRadius()*2);
     }
     private double getYLowerBound(){
-        return bullsEye.getRadius();
+        return bullsEye.getRadius() + 50;
     }
     private double getXUpperBound(){
         return MAX_WIDTH -bullsEye.getRadius();
