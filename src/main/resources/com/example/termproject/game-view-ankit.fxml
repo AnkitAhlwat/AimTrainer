@@ -30,9 +30,7 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Pane fx:id="pane" onMouseClicked="#changeLocation">
-         <Circle fx:id="bullsEye" centerX="400" centerY="400" radius="60" />
-      </Pane>
+         <Circle fx:id="bullsEye" onMouseClicked="#changeLocation" centerX="400" centerY="400" radius="60" />
       <Pane fx:id="scoreBoard" layoutX="312.0" layoutY="130.0" prefHeight="610.0" prefWidth="656.0" visible="false">
          <children>
             <Label alignment="CENTER" contentDisplay="CENTER" layoutX="1.0" layoutY="30.0" prefHeight="70.0" prefWidth="656.0" text="Scoreboard" textAlignment="CENTER" textFill="WHITE">
