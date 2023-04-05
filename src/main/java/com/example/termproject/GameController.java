@@ -71,6 +71,13 @@ public class GameController {
 
     @FXML
     private void initialize() {
+        setScore(0);
+        setTotalClicks(0);
+        scoreBoard.setVisible(false);
+        darkenBackground.setVisible(false);
+        bullsEye.setFill(new ImagePattern(logo));
+        bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
+        bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
         anchorPane.setCursor(new ImageCursor(cursorImage));
         timeLabel.setText("5");
         startTime = System.nanoTime();
@@ -94,7 +101,6 @@ public class GameController {
         playSound();
         Score++;
         scoreLabel.setText(""+Score);
-        bullsEye.setFill(new ImagePattern(logo));
         bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
         bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
     }
@@ -134,6 +140,7 @@ public class GameController {
     }
 
     public void tryAgain() {
+        initialize();
     }
 
     public void switchToMainMenu() throws IOException {
@@ -141,5 +148,12 @@ public class GameController {
         Scene scene = new Scene(root, 320, 600);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void setScore(int score) {
+        Score = score;
+    }
+    public void setTotalClicks(int totalClicks) {
+        this.totalClicks = totalClicks;
     }
 }
