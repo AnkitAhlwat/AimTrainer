@@ -65,13 +65,18 @@ public class GameController {
     private long startTime;
     private AnimationTimer animationTimer;
     private MediaPlayer mediaPlayer;
-    Image logo = new Image("patrick.png");
+    private Image logo;
 
-    Image cursorImage = new Image("scope.png");
+    private Image cursorImage = new Image("scope.png");
 
 
     @FXML
     private void initialize() {
+        if (MainMenu.selectedMap != "spongebobhouse"){
+            logo = new Image("target.png");
+        }else {
+            logo = new Image("patrick.png");
+        }
         setScore(0);
         setTotalClicks(0);
         scoreBoard.setVisible(false);
