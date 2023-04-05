@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="1280.0" style="-fx-background-image: url('mapselection.jpg');" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.termproject.ChangeMap">
+<children>
+    <Button fx:id="backButton" layoutX="620.0" layoutY="732.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="265.0" layoutX="45.0" layoutY="365.0" stroke="BLACK" strokeType="INSIDE" width="292.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="265.0" layoutX="342.0" layoutY="365.0" stroke="BLACK" strokeType="INSIDE" width="292.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="265.0" layoutX="937.0" layoutY="365.0" stroke="BLACK" strokeType="INSIDE" width="299.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="265.0" layoutX="639.0" layoutY="365.0" stroke="BLACK" strokeType="INSIDE" width="292.0" />
+      <ImageView fitHeight="152.0" fitWidth="270.0" layoutX="56.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../terminal.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="152.0" fitWidth="270.0" layoutX="650.0" layoutY="198.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../spongebobhouse.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="186.0" fitWidth="270.0" layoutX="954.0" layoutY="198.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../afghan.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="124.0" layoutY="365.0" text="Terminal" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="152.0" fitWidth="270.0" layoutX="353.0" layoutY="198.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../nuketown.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="1034.0" layoutY="365.0" text="Afghan" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="646.0" layoutY="368.0" text="Spongebob House" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="409.0" layoutY="365.0" text="Nuketown" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Text fill="WHITE" layoutX="56.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terminal, the airport map in Call of Duty MW2: Where the only thing that takes off faster than a plane is a noob's trigger finger. Watch out for the escalators, they're steeper than your skill level. Don't forget to grab your boarding pass, because the only flight out of here is in a body bag!" wrappingWidth="270.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="353.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Nuketown, where the grass is green, the sky is blue, and the only thing standing between you and victory is a bunch of pesky enemies. Remember, there's no place like dome as you fight it out in this explosive suburban battleground. Time to go nuclear!" wrappingWidth="270.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="650.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Get ready to soak up some skills at Spongebob's house. It's the perfect place to improve your aim, and maybe catch a glimpse of that sassy squid, Squidward." wrappingWidth="270.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="954.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Afghan, the Call of Duty map where snipers reign supreme and the only thing hotter than the desert sun is the rage of the guy you just quickscoped. Remember to bring your sunscreen and a good pair of shades, because you'll be getting lit up more than a grill at a summer BBQ!" wrappingWidth="270.0">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Text>
+      <Label layoutX="448.0" layoutY="53.0" text="Select a Map" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="64.0" />
+         </font>
+      </Label>
+</children>
+</AnchorPane>
