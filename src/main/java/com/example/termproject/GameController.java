@@ -59,7 +59,7 @@ public class GameController {
         return MAX_HEIGHT-(bullsEye.getRadius()*2);
     }
     private double getYLowerBound(){
-        return bullsEye.getRadius() + 50;
+        return bullsEye.getRadius() + 100;
     }
     private double getXUpperBound(){
         return MAX_WIDTH -bullsEye.getRadius();
