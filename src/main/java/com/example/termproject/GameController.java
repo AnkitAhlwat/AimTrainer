@@ -3,6 +3,7 @@ package com.example.termproject;
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.ImageCursor;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -18,6 +19,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Screen;
 
 import java.io.File;
 import java.io.IOException;
@@ -168,6 +170,13 @@ public class GameController {
     public void switchToMainMenu() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene = new Scene(root, 320, 600);
+        Rectangle2D screenBounds = Screen.getPrimary().getVisualBounds();
+        stage.setX(0);
+        stage.setY(0);
+        double stageWidth = 320;
+        double stageHeight = 600;
+        stage.setX(screenBounds.getMinX() + (screenBounds.getWidth() - stageWidth) / 2);
+        stage.setY(screenBounds.getMinY() + (screenBounds.getHeight() - stageHeight) / 2);
         stage.setScene(scene);
         stage.show();
     }
