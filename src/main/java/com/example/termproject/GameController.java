@@ -2,10 +2,14 @@ package com.example.termproject;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.ImageCursor;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.Pane;
@@ -17,7 +21,10 @@ import javafx.scene.media.MediaPlayer;
 import javafx.scene.shape.Rectangle;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.Random;
+
+import static com.example.termproject.GameApplication.stage;
 
 public class GameController {
     private final double MAX_HEIGHT = 800;;
@@ -126,4 +133,13 @@ public class GameController {
         tryAgain.setVisible(true);
     }
 
+    public void tryAgain() {
+    }
+
+    public void switchToMainMenu() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
+        Scene scene = new Scene(root, 320, 600);
+        stage.setScene(scene);
+        stage.show();
+    }
 }

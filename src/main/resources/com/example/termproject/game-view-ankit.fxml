@@ -68,8 +68,8 @@
                   <Font name="System Bold" size="32.0" />
                </font>
             </Label>
-            <Button fx:id="mainMenu" layoutX="268.0" layoutY="537.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="Main Menu" />
-            <Button fx:id="tryAgain" layoutX="275.0" layoutY="463.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="Try Again" />
+            <Button fx:id="mainMenu" onMouseClicked="#switchToMainMenu" layoutX="268.0" layoutY="537.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="Main Menu" />
+            <Button fx:id="tryAgain" onMouseClicked="#tryAgain" layoutX="275.0" layoutY="463.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="Try Again" />
             <Label fx:id="scoreBoardText" alignment="CENTER" contentDisplay="CENTER" layoutX="58.0" layoutY="109.0" prefHeight="70.0" prefWidth="542.0" text="Insert Text" textAlignment="CENTER" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="28.0" />
