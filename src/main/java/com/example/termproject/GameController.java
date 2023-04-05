@@ -2,10 +2,8 @@ package com.example.termproject;
 
 import javafx.animation.AnimationTimer;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
-import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Circle;
@@ -23,13 +21,9 @@ public class GameController {
     @FXML
     private Label timeLabel;
     @FXML
-    private BorderPane gameWindow;
-    @FXML
     private Circle bullsEye;
     @FXML
     private Pane pane;
-    @FXML
-    private Button button;
     private long startTime;
     private AnimationTimer animationTimer;
     Image logo = new Image("bullseye.png");
