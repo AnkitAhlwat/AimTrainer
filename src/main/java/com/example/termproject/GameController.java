@@ -78,13 +78,13 @@ public class GameController {
         bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
         bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
         anchorPane.setCursor(new ImageCursor(cursorImage));
-        timeLabel.setText("5");
+        timeLabel.setText("20");
         startTime = System.nanoTime();
         animationTimer = new AnimationTimer() {
             @Override
             public void handle(long now) {
                 long elapsedTime = (now - startTime) / 1_000_000_000;
-                int time = 5 - (int) elapsedTime;
+                int time = 20 - (int) elapsedTime;
                 timeLabel.setText(Integer.toString(time));
 
                 if (time <= 0) {
@@ -99,12 +99,36 @@ public class GameController {
     private void changeLocation(){
         playSound();
         Score++;
+        if (Score == 5){
+            playFiveStreakSound();
+        } else if (Score == 12){
+            playTwelveStreakSound();
+        }else if (Score == 25){
+            playTwentyStreakSound();
+        }
         scoreLabel.setText(""+Score);
         bullsEye.setCenterX(randomCircleGenerator.nextDouble(getXLowerBound(),getXUpperBound()));
         bullsEye.setCenterY(randomCircleGenerator.nextDouble(getYLowerBound(),getYUpperBound()));
     }
+
+
     private void playSound(){
         Media sound = new Media(new File(musicFile).toURI().toString());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+    }
+    private void playFiveStreakSound() {
+        Media sound = new Media(new File("src/main/resources/missile.mp3").toURI().toString());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+    }
+    private void playTwelveStreakSound() {
+        Media sound = new Media(new File("src/main/resources/ac130.mp3").toURI().toString());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+    }
+    private void playTwentyStreakSound() {
+        Media sound = new Media(new File("src/main/resources/nuke.mp3").toURI().toString());
         mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
     }
@@ -132,7 +156,7 @@ public class GameController {
         targetsHit.setText(""+Score);
         targetsMissed.setText(""+(totalClicks - Score));
         accuracy.setText(""+ (Score * 100 / totalClicks) + "%");
-        scoreBoardText.setText("Game Over!");
+        setScoreBoardText();
         mainMenu.setVisible(true);
         tryAgain.setVisible(true);
     }
@@ -147,7 +171,23 @@ public class GameController {
         stage.setScene(scene);
         stage.show();
     }
-
+    private void setScoreBoardText() {
+        if (Score == 0) {
+            scoreBoardText.setText("Sucks to suck");
+        } else if (Score < 5) {
+            scoreBoardText.setText("You're still pretty bad.");
+        } else if (Score < 12) {
+            scoreBoardText.setText("Not bad, kid.");
+        } else if (Score > 12) {
+            scoreBoardText.setText("'Good Job'-Armani China");
+            Media sound = new Media(new File("src/main/resources/success.mp3").toURI().toString());
+            mediaPlayer = new MediaPlayer(sound);
+            mediaPlayer.play();
+        }
+    }
+    private int getScore() {
+        return Score;
+    }
     public void setScore(int score) {
         Score = score;
     }
