@@ -7,11 +7,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
+import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
+import java.io.File;
 import java.io.IOException;
 
 import static com.example.termproject.GameApplication.stage;
@@ -121,10 +123,19 @@ public class MainMenu extends Application {
         difficultyButton.setText("DIFFICULTY: HARD");
         difficultyPopup.setVisible(false);
         GameController.size = 30;
+        String musicFile = "src/main/resources/zachlaugh.mp3";
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
     }
     public void selectInsane() {
         difficultyButton.setText("DIFFICULTY: INSANE");
         difficultyPopup.setVisible(false);
         GameController.size = 25;
+        String musicFile = "src/main/resources/heheboi.mp3";
+        Media sound = new Media(new File(musicFile).toURI().toString());
+        mediaPlayer = new MediaPlayer(sound);
+        mediaPlayer.play();
+        mediaPlayer.setVolume(0.9);
     }
 }
