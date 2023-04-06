@@ -42,7 +42,7 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="353.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Call of Duty, the shipment map is like a package delivery gone wrong. You spawn in a tiny box and the enemy team drops in like Amazon Prime, delivering bullets instead of boxes. It's chaos, but at least you'll know your virtual package has been successfully delivered... to the enemy's face." wrappingWidth="270.0">
+      <Text fill="WHITE" layoutX="353.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Shipment is like a package delivery gone wrong. You spawn in a tiny box and the enemy team drops in like Amazon Prime, delivering bullets instead of boxes. It's chaos, but at least you'll know your virtual package has been successfully delivered... to the enemy's face." wrappingWidth="270.0">
          <font>
             <Font size="16.0" />
          </font>
