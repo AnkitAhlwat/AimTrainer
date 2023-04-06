@@ -29,7 +29,7 @@
                   <Font size="16.0" />
                </font>
             </Button>
-          <Button fx:id="mapButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMapButtonAction" stylesheets="@../../../buttonstyle.css" text="MAP: SHIPMENT" textAlignment="CENTER">
+          <Button fx:id="mapButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMapButtonAction" stylesheets="@../../../buttonstyle.css" text="MAP" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>

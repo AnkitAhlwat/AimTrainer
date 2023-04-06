@@ -36,7 +36,7 @@ public class MainMenu extends Application {
     @FXML
     private Pane difficultyPopup;
 
-    public static String selectedMap = "spongebobhouse";
+    public static String selectedMap = "nuketown";
 
     @Override
     public void start(Stage primaryStage) throws Exception {
