@@ -190,16 +190,16 @@ public class GameController {
     }
     private void setScoreBoardText() {
         if (Score == 0) {
-            scoreBoardText.setText("Sucks to suck");
+            scoreBoardText.setText("Sucks to suck.");
         } else if (Score < 5) {
             Media sound = new Media(new File("src/main/resources/whatiseventhat.mp3").toURI().toString());
             mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
-            scoreBoardText.setText("You're still pretty bad.");
+            scoreBoardText.setText("Wow, you're pretty bad.");
         } else if (Score < 12) {
             scoreBoardText.setText("Not bad, kid.");
         } else if (Score > 12) {
-            scoreBoardText.setText("'Good Job'-Armani China");
+            scoreBoardText.setText("'Good Job' - Armani China");
             Media sound = new Media(new File("src/main/resources/success.mp3").toURI().toString());
             mediaPlayer = new MediaPlayer(sound);
             mediaPlayer.play();
