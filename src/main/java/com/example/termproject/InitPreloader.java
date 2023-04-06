@@ -23,7 +23,7 @@ public class InitPreloader implements Initializable {
             message[0] = "Compiling Shaders...";
             Platform.runLater(() -> loadlabell.setText(message[0]));
             try {
-                Thread.sleep(4);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -32,7 +32,7 @@ public class InitPreloader implements Initializable {
             message[0] = "Loading Environment...";
             Platform.runLater(() -> loadlabell.setText(message[0]));
             try {
-                Thread.sleep(2);
+                Thread.sleep(4000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -41,7 +41,7 @@ public class InitPreloader implements Initializable {
             message[0] = "Setting Targets...";
             Platform.runLater(() -> loadlabell.setText(message[0]));
             try {
-                Thread.sleep(2);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -50,7 +50,7 @@ public class InitPreloader implements Initializable {
             message[0] = "Calling Mike Pence...";
             Platform.runLater(() -> loadlabell.setText(message[0]));
             try {
-                Thread.sleep(1);
+                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
