@@ -17,19 +17,19 @@
             <Image url="@../../../logo-white.png" />
          </image>
       </ImageView>
-      <VBox alignment="CENTER" layoutX="59.0" layoutY="286.0" prefHeight="277.0" prefWidth="200.0" spacing="24.0">
+      <VBox alignment="CENTER" layoutX="35.0" layoutY="287.0" prefHeight="277.0" prefWidth="249.0" spacing="24.0">
          <children>
           <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartButtonAction" stylesheets="@../../../buttonstyle.css" text="START" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-          <Button fx:id="difficultyButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDifficultyButtonAction" onMouseClicked="#selectDifficulty" stylesheets="@../../../buttonstyle.css" text="DIFFICULTY: MEDIUM" textAlignment="CENTER">
+          <Button fx:id="difficultyButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDifficultyButtonAction" onMouseClicked="#selectDifficulty" stylesheets="@../../../buttonstyle.css" text="DIFFICULTY: EASY" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-          <Button fx:id="mapButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMapButtonAction" stylesheets="@../../../buttonstyle.css" text="MAP" textAlignment="CENTER">
+          <Button fx:id="mapButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMapButtonAction" stylesheets="@../../../buttonstyle.css" text="MAP: SHIPMENT" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>
