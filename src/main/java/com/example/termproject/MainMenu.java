@@ -108,18 +108,22 @@ public class MainMenu extends Application {
         difficultyPopup.setVisible(true);
     }
     public void selectEasy() {
+        difficultyButton.setText("DIFFICULTY: EASY");
         difficultyPopup.setVisible(false);
         GameController.size = 80;
     }
     public void selectMedium() {
+        difficultyButton.setText("DIFFICULTY: MEDIUM");
         difficultyPopup.setVisible(false);
         GameController.size = 60;
     }
     public void selectHard() {
+        difficultyButton.setText("DIFFICULTY: HARD");
         difficultyPopup.setVisible(false);
         GameController.size = 30;
     }
     public void selectInsane() {
+        difficultyButton.setText("DIFFICULTY: INSANE");
         difficultyPopup.setVisible(false);
         GameController.size = 25;
     }
