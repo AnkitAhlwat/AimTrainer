@@ -14,7 +14,7 @@
          <font>
             <Font size="16.0" />
          </font></Button>
-    <Button fx:id="difficultyButton" alignment="CENTER" contentDisplay="CENTER" layoutX="99.0" layoutY="363.0" mnemonicParsing="false" onAction="#handleDifficultyButtonAction" stylesheets="@../../../buttonstyle.css" text="DIFFICULTY" textAlignment="CENTER">
+    <Button fx:id="difficultyButton" onMouseClicked="#selectDifficulty" alignment="CENTER" contentDisplay="CENTER" layoutX="99.0" layoutY="363.0" mnemonicParsing="false" onAction="#handleDifficultyButtonAction" stylesheets="@../../../buttonstyle.css" text="DIFFICULTY" textAlignment="CENTER">
          <font>
             <Font size="16.0" />
          </font></Button>
@@ -32,24 +32,24 @@
             <Image url="@../../../logo-white.png" />
          </image>
       </ImageView>
-      <Pane fx:id="difficultypopup" layoutX="35.0" layoutY="60.0" prefHeight="480.0" prefWidth="249.0" style="-fx-background-image: url('mapselection.jpg');" visible="false">
+      <Pane fx:id="difficultyPopup" layoutX="35.0" layoutY="60.0" prefHeight="480.0" prefWidth="249.0" style="-fx-background-image: url('mapselection.jpg');" visible="false">
          <children>
-            <Button fx:id="insanebutton" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="339.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="INSANE" textAlignment="CENTER">
+            <Button fx:id="insaneButton" onMouseClicked="#selectInsane" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="339.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="INSANE" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="hardbutton" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="265.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="HARD" textAlignment="CENTER">
+            <Button fx:id="hardButton" onMouseClicked="#selectHard" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="265.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="HARD" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="mediumbutton" alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="195.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="MEDIUM" textAlignment="CENTER">
+            <Button fx:id="mediumButton" onMouseClicked="#selectMedium" alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="195.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="MEDIUM" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>
             </Button>
-            <Button fx:id="easybutton" alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" layoutY="121.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="EASY" textAlignment="CENTER">
+            <Button fx:id="easyButton" onMouseClicked="#selectEasy" alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" layoutY="121.0" mnemonicParsing="false" stylesheets="@../../../buttonstyle.css" text="EASY" textAlignment="CENTER">
                <font>
                   <Font size="16.0" />
                </font>
