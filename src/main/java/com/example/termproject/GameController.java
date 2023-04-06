@@ -23,6 +23,7 @@ import javafx.stage.Screen;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.Objects;
 import java.util.Random;
 
 import static com.example.termproject.GameApplication.stage;
@@ -72,7 +73,7 @@ public class GameController {
 
     @FXML
     private void initialize() {
-        if (MainMenu.selectedMap != "spongebobhouse"){
+        if (!Objects.equals(MainMenu.selectedMap, "spongebobhouse")){
             logo = new Image("target.png");
         }else {
             logo = new Image("patrick.png");
