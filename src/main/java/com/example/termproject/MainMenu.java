@@ -121,6 +121,6 @@ public class MainMenu extends Application {
     }
     public void selectInsane() {
         difficultyPopup.setVisible(false);
-        GameController.size = 20;
+        GameController.size = 25;
     }
 }
