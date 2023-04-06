@@ -7,6 +7,8 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.Pane;
 import javafx.scene.media.MediaPlayer;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
@@ -21,6 +23,16 @@ public class MainMenu extends Application {
     @FXML private Button difficultyButton;
     @FXML private Button mapButton;
     @FXML private Button exitButton;
+    @FXML
+    private Button easyButton;
+    @FXML
+    private Button mediumButton;
+    @FXML
+    private Button hardButton;
+    @FXML
+    private Button insaneButton;
+    @FXML
+    private Pane difficultyPopup;
 
     public static String selectedMap = "spongebobhouse";
 
@@ -62,6 +74,7 @@ public class MainMenu extends Application {
     @FXML
     private void handleDifficultyButtonAction() {
         // handle difficulty button action
+
     }
 
     @FXML
@@ -89,5 +102,25 @@ public class MainMenu extends Application {
 
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public void selectDifficulty() {
+        difficultyPopup.setVisible(true);
+    }
+    public void selectEasy() {
+        difficultyPopup.setVisible(false);
+        GameController.size = 80;
+    }
+    public void selectMedium() {
+        difficultyPopup.setVisible(false);
+        GameController.size = 60;
+    }
+    public void selectHard() {
+        difficultyPopup.setVisible(false);
+        GameController.size = 30;
+    }
+    public void selectInsane() {
+        difficultyPopup.setVisible(false);
+        GameController.size = 5;
     }
 }

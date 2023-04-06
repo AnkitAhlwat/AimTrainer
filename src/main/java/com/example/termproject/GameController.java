@@ -29,6 +29,7 @@ import java.util.Random;
 import static com.example.termproject.GameApplication.stage;
 
 public class GameController {
+    public static int size = 60;
     private final double MAX_HEIGHT = 800;;
     private final double MAX_WIDTH = 1200;
     private int totalClicks = 0;
