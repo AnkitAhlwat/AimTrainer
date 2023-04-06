@@ -23,7 +23,7 @@ public class InitPreloader implements Initializable {
             message[0] = "Compiling Shaders...";
             Platform.runLater(() -> loadlabell.setText(message[0]));
             try {
-                Thread.sleep(3000);
+                Thread.sleep(7000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
