@@ -32,7 +32,7 @@
             <Font name="System Bold" size="32.0" />
          </font>
       </Label>
-      <Label layoutX="409.0" layoutY="365.0" text="Nuketown" textFill="WHITE">
+      <Label layoutX="409.0" layoutY="365.0" text="Shipment" textFill="WHITE">
          <font>
             <Font name="System Bold" size="32.0" />
          </font>
@@ -42,7 +42,7 @@
             <Font size="16.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="353.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Nuketown, where the grass is green, the sky is blue, and the only thing standing between you and victory is a bunch of pesky enemies. Remember, there's no place like dome as you fight it out in this explosive suburban battleground. Time to go nuclear!" wrappingWidth="270.0">
+      <Text fill="WHITE" layoutX="353.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In Call of Duty, the shipment map is like a package delivery gone wrong. You spawn in a tiny box and the enemy team drops in like Amazon Prime, delivering bullets instead of boxes. It's chaos, but at least you'll know your virtual package has been successfully delivered... to the enemy's face." wrappingWidth="270.0">
          <font>
             <Font size="16.0" />
          </font>
