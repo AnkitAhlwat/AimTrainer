@@ -35,6 +35,7 @@ public class GameApplication extends Application {
         Media sound = new Media(new File(musicFile).toURI().toString());
         mediaPlayerMM = new MediaPlayer(sound);
         mediaPlayerMM.play();
+        mediaPlayerMM.setCycleCount(5);
     }
     public static void main(String[] args) {
         System.setProperty("javafx.preloader", LauncherPreloader.class.getName());
