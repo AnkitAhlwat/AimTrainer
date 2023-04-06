@@ -17,30 +17,6 @@
             <Image url="@../../../logo-white.png" />
          </image>
       </ImageView>
-      <Pane fx:id="difficultyPopup" layoutX="35.0" layoutY="60.0" prefHeight="480.0" prefWidth="249.0" style="-fx-background-image: url('mapselection.jpg');" visible="false">
-         <children>
-            <Button fx:id="insaneButton" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#selectInsane" stylesheets="@../../../buttonstyle.css" text="INSANE" textAlignment="CENTER">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Button fx:id="hardButton" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#selectHard" stylesheets="@../../../buttonstyle.css" text="HARD" textAlignment="CENTER">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Button fx:id="mediumButton" alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="195.0" mnemonicParsing="false" onMouseClicked="#selectMedium" stylesheets="@../../../buttonstyle.css" text="MEDIUM" textAlignment="CENTER">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-            <Button fx:id="easyButton" alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" layoutY="121.0" mnemonicParsing="false" onMouseClicked="#selectEasy" stylesheets="@../../../buttonstyle.css" text="EASY" textAlignment="CENTER">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Button>
-         </children>
-      </Pane>
       <VBox alignment="CENTER" layoutX="59.0" layoutY="286.0" prefHeight="277.0" prefWidth="200.0" spacing="24.0">
          <children>
           <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartButtonAction" stylesheets="@../../../buttonstyle.css" text="START" textAlignment="CENTER">
@@ -65,5 +41,29 @@
             </Button>
          </children>
       </VBox>
+      <Pane fx:id="difficultyPopup" layoutX="35.0" layoutY="60.0" prefHeight="480.0" prefWidth="249.0" style="-fx-background-image: url('mapselection.jpg');" visible="false">
+         <children>
+            <Button fx:id="insaneButton" alignment="CENTER" contentDisplay="CENTER" layoutX="77.0" layoutY="339.0" mnemonicParsing="false" onMouseClicked="#selectInsane" stylesheets="@../../../buttonstyle.css" text="INSANE" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="hardButton" alignment="CENTER" contentDisplay="CENTER" layoutX="84.0" layoutY="265.0" mnemonicParsing="false" onMouseClicked="#selectHard" stylesheets="@../../../buttonstyle.css" text="HARD" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="mediumButton" alignment="CENTER" contentDisplay="CENTER" layoutX="73.0" layoutY="195.0" mnemonicParsing="false" onMouseClicked="#selectMedium" stylesheets="@../../../buttonstyle.css" text="MEDIUM" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="easyButton" alignment="CENTER" contentDisplay="CENTER" layoutX="87.0" layoutY="121.0" mnemonicParsing="false" onMouseClicked="#selectEasy" stylesheets="@../../../buttonstyle.css" text="EASY" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
 </children>
 </AnchorPane>
