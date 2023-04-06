@@ -5,27 +5,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="320" style="-fx-background-image: url('mainmenu.jpg');" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.termproject.MainMenu">
 <children>
-    <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" layoutX="117.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleStartButtonAction" stylesheets="@../../../buttonstyle.css" text="START" textAlignment="CENTER">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-    <Button fx:id="difficultyButton" alignment="CENTER" contentDisplay="CENTER" layoutX="68.0" layoutY="363.0" mnemonicParsing="false" onAction="#handleDifficultyButtonAction" onMouseClicked="#selectDifficulty" stylesheets="@../../../buttonstyle.css" text="DIFFICULTY: INSANE" textAlignment="CENTER">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-    <Button fx:id="mapButton" alignment="CENTER" contentDisplay="CENTER" layoutX="123.0" layoutY="425.0" mnemonicParsing="false" onAction="#handleMapButtonAction" stylesheets="@../../../buttonstyle.css" text="MAP" textAlignment="CENTER">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
-    <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" layoutX="124.0" layoutY="488.0" mnemonicParsing="false" onAction="#handleExitButtonAction" stylesheets="@../../../buttonstyle.css" text="EXIT" textAlignment="CENTER">
-         <font>
-            <Font size="16.0" />
-         </font></Button>
       <Circle layoutX="160.0" layoutY="160.0" radius="100.0" stroke="BLACK" strokeType="INSIDE" />
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="85.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -56,5 +41,29 @@
             </Button>
          </children>
       </Pane>
+      <VBox alignment="CENTER" layoutX="59.0" layoutY="286.0" prefHeight="277.0" prefWidth="200.0" spacing="24.0">
+         <children>
+          <Button fx:id="startButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleStartButtonAction" stylesheets="@../../../buttonstyle.css" text="START" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+          <Button fx:id="difficultyButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDifficultyButtonAction" onMouseClicked="#selectDifficulty" stylesheets="@../../../buttonstyle.css" text="DIFFICULTY: INSANE" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+          <Button fx:id="mapButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleMapButtonAction" stylesheets="@../../../buttonstyle.css" text="MAP" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+          <Button fx:id="exitButton" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleExitButtonAction" stylesheets="@../../../buttonstyle.css" text="EXIT" textAlignment="CENTER">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
 </children>
 </AnchorPane>
