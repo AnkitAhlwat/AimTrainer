@@ -79,6 +79,7 @@ public class GameController {
         }else {
             logo = new Image("patrick.png");
         }
+        bullsEye.setRadius(size);
         setScore(0);
         setTotalClicks(0);
         scoreBoard.setVisible(false);
