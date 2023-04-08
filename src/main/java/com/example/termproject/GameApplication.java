@@ -11,6 +11,9 @@ import java.io.IOException;
 
 /**
  * The main Game application.
+ *
+ * @author Ankit Ahlwat and Jas Randhawa
+ * @version 2023
  */
 public class GameApplication extends Application {
 
