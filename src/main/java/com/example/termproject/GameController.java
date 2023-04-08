@@ -28,7 +28,13 @@ import java.util.Random;
 
 import static com.example.termproject.GameApplication.stage;
 
+/**
+ * The Game controller.
+ */
 public class GameController {
+    /**
+     * The default size for cross-hair.
+     */
     public static int size = 60;
     private final double MAX_HEIGHT = 800;;
     private final double MAX_WIDTH = 1200;
@@ -171,10 +177,18 @@ public class GameController {
         tryAgain.setVisible(true);
     }
 
+    /**
+     * Reset Game and score.
+     */
     public void tryAgain() {
         initialize();
     }
 
+    /**
+     * Switch to main menu.
+     *
+     * @throws IOException the io exception
+     */
     public void switchToMainMenu() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene = new Scene(root, 320, 600);
@@ -208,9 +222,21 @@ public class GameController {
     private int getScore() {
         return Score;
     }
+
+    /**
+     * Sets score.
+     *
+     * @param score the score
+     */
     public void setScore(int score) {
         Score = score;
     }
+
+    /**
+     * Sets total clicks.
+     *
+     * @param totalClicks the total clicks
+     */
     public void setTotalClicks(int totalClicks) {
         this.totalClicks = totalClicks;
     }

@@ -18,6 +18,9 @@ import java.io.IOException;
 
 import static com.example.termproject.GameApplication.stage;
 
+/**
+ * The Main menu.
+ */
 public class MainMenu extends Application {
     private MediaPlayer mediaPlayer;
 
@@ -36,6 +39,9 @@ public class MainMenu extends Application {
     @FXML
     private Pane difficultyPopup;
 
+    /**
+     * The constant selectedMap.
+     */
     public static String selectedMap = "nuketown";
 
     @Override
@@ -102,23 +108,43 @@ public class MainMenu extends Application {
         System.exit(0);
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         launch(args);
     }
 
+    /**
+     * Select difficulty.
+     */
     public void selectDifficulty() {
         difficultyPopup.setVisible(true);
     }
+
+    /**
+     * Select easy.
+     */
     public void selectEasy() {
         difficultyButton.setText("DIFFICULTY: EASY");
         difficultyPopup.setVisible(false);
         GameController.size = 80;
     }
+
+    /**
+     * Select medium.
+     */
     public void selectMedium() {
         difficultyButton.setText("DIFFICULTY: MEDIUM");
         difficultyPopup.setVisible(false);
         GameController.size = 60;
     }
+
+    /**
+     * Select hard.
+     */
     public void selectHard() {
         difficultyButton.setText("DIFFICULTY: HARD");
         difficultyPopup.setVisible(false);
@@ -128,6 +154,10 @@ public class MainMenu extends Application {
         mediaPlayer = new MediaPlayer(sound);
         mediaPlayer.play();
     }
+
+    /**
+     * Select insane.
+     */
     public void selectInsane() {
         difficultyButton.setText("DIFFICULTY: INSANE");
         difficultyPopup.setVisible(false);

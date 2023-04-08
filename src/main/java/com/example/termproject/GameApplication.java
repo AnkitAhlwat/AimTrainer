@@ -9,10 +9,22 @@ import javafx.stage.Stage;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * The main Game application.
+ */
 public class GameApplication extends Application {
 
+    /**
+     * The Media player.
+     */
     static MediaPlayer mediaPlayerMM;
+    /**
+     * The constant stage.
+     */
     public static Stage stage = null;
+    /**
+     * The constant scene.
+     */
     public static Scene scene = null;
 
     @Override
@@ -37,6 +49,12 @@ public class GameApplication extends Application {
         mediaPlayerMM.play();
         mediaPlayerMM.setCycleCount(5);
     }
+
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         System.setProperty("javafx.preloader", LauncherPreloader.class.getName());
         launch(args);

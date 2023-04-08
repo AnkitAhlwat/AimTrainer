@@ -7,15 +7,30 @@ import javafx.scene.control.Label;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * The Init preloader.
+ */
 public class InitPreloader implements Initializable {
 
+    /**
+     * The Loadlabel.
+     */
     public Label loadlabel;
+    /**
+     * The constant loadlabel.
+     */
     public static Label loadlabell;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         loadlabell = loadlabel;
     }
 
+    /**
+     * Check functions string.
+     *
+     * @return the string
+     * @throws InterruptedException the interrupted exception
+     */
     public String checkFunctions() throws InterruptedException {
 
         final String[] message = {""};
