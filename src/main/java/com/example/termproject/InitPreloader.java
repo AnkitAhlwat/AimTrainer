@@ -38,7 +38,7 @@ public class InitPreloader implements Initializable {
             message[0] = "Compiling Shaders...";
             Platform.runLater(() -> loadlabell.setText(message[0]));
             try {
-                Thread.sleep(7000);
+                Thread.sleep(4000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
@@ -47,7 +47,7 @@ public class InitPreloader implements Initializable {
             message[0] = "Loading Environment...";
             Platform.runLater(() -> loadlabell.setText(message[0]));
             try {
-                Thread.sleep(4000);
+                Thread.sleep(3000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
