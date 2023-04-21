@@ -48,6 +48,8 @@ public class MainMenu extends Application {
     public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         primaryStage.setTitle("Main Menu");
+        Image logo = new Image("bullseye.png");
+        primaryStage.getIcons().add(logo);
         primaryStage.setScene(new Scene(root, 320, 600));
         primaryStage.show();
     }
